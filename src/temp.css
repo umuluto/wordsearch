@@ -1,0 +1,178 @@
+@import 'reset.css';
+
+* {
+	user-select: none;
+	color: white;
+}
+
+html, body, #root {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #5282b3;
+	height: 100%;
+}
+
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.button {
+	line-height: 1.5rem;
+	cursor: pointer;
+}
+
+.button:hover {
+	text-decoration: underline;
+}
+
+.button--medium {
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
+
+.home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.home__title {
+	font-size: 3rem;
+}
+
+.home__buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10rem;
+}
+
+.menu {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	grid-gap: 1rem
+}
+
+.menu__message {
+	grid-row: 1 / span 5;
+	grid-column: 1 / span 2;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.menu__button {
+	grid-row: 1 / span 5;
+	grid-column: 1;
+}
+
+.play__category {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.play__mid {
+	display: flex;
+	align-items: center;
+}
+
+.board {
+	display: grid;
+	background-color: white;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.12);
+	width: 95vw;
+	height: 95vw;
+}
+
+.list__item {
+	line-height: 1.5rem;
+}
+
+.list__item--hinted {
+	color: rgba(255,255,255,0.4);
+}
+
+.board__cell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.5rem;
+	transition: .5s;
+}
+
+.board__cell:hover {
+	color: blue;
+	font-size: 2.3rem;
+	transform: rotate(10deg);
+	text-transform: capitalize;
+}
+
+.board__cell:active {
+	font-size: 1.8rem;
+}
+
+.board__cell--hilited {
+	font-size: 1.7rem;
+	text-transform: capitalize;
+}
+
+.board__cell--selected {
+	color: blue;
+	font-size: 1.8rem;
+	transform: rotate(10deg);
+	text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+	#root {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.menu {
+		width: 40%;
+	}
+	
+	.board {
+		width: 40vw;
+		height: 40vw;
+	}
+
+	.play {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 80vw;
+		height: 40vw;
+	}
+
+	.play__left {
+		position: absolute;
+		left: 0px;
+		top: 20px;
+	}
+
+	.play__buttons {
+		margin-top: 2rem;
+	}
+
+	.play__mid {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.play__right {
+		width: 5rem;
+	}
+}
