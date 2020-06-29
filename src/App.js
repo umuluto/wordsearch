@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import screens from './app_screens.js';
+import Home from './Home.js';
+import Menu from './Menu.js';
+import Play from './Play.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './temp.css';
+
+export default function App() {
+	const [screen, setScreen] = useState(screens.HOME);
+	const [data, setData] = useState();
+
+	const goTo = d => () => setScreen(d);
+	const goHome = () => setScreen(screens.HOME);
+	const mergeData = d => setData(dt => ({...dt, ...d}));
+
+	let main = null;
+	switch (screen) {
+		case screens.HOME:
+			main = <Home goTo={goTo} />;
+			break;
+		case screens.MENU:
+			main = <Menu goTo={goTo} mergeData={mergeData} />;
+			break;
+		case screens.PLAY:
+			main = <Play goHome={goHome} data={data} />;
+			break;
+		default:
+			main = <p>not implemented</p>;
+			break;
+	}
+
+	let overlay = null;
+
+	return <>{main}{overlay}</>;
 }
-
-export default App;
