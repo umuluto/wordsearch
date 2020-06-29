@@ -1,4 +1,4 @@
 export default {
-	correct: new Audio('/correct.mp3'),
-	wrong: new Audio('/wrong.mp3')
+	correct: new Audio('/wordsearch/correct.mp3'),
+	wrong: new Audio('/wordsearch/wrong.mp3')
 };

@@ -5,14 +5,14 @@ export default function Menu({ goTo, mergeData }) {
 	const [levels, setLevels] = useState([]);
 
 	useEffect(() => {
-		fetch('/data/index.json')
+		fetch('/wordsearch/data/index.json')
 			.then(f => f.json())
 			.then(o => setLevels(o));
 	}, []);
 
 	const goLevel = l => () => {
 		mergeData({ category: l });
-		fetch(`/data/${l}.json`)
+		fetch(`/wordsearch/data/${l}.json`)
 			.then(f => f.json())
 			.then(o => {
 				mergeData(o);
