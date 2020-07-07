@@ -1,7 +1,7 @@
 import React from 'react';
 import screens from './app_screens.js';
 
-export default function Home({ goTo }) {
+export default function Home({ goTo, toggleOptions }) {
 	return (
 		<div className='home'>
 			<p className='home__title'>Word Search</p>
@@ -15,6 +15,11 @@ export default function Home({ goTo }) {
 					onClick={goTo(screens.READ)}
 				>
 					Generate Game
+				</p>
+				<p className='button'
+					onClick={toggleOptions}
+				>
+					Options
 				</p>
 			</ul>
 		</div>

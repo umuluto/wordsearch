@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Board from './Board.js';
 import List from './List.js';
 
-export default function Play({ data, goHome }) {
+export default function Play({ data, goHome, toggleOptions, sounds }) {
 	const [founds, setFounds] = useState([]);
 	const [hinted, setHinted] = useState(false);
 
@@ -23,12 +23,12 @@ export default function Play({ data, goHome }) {
 				<p className='play__category'>&ldquo;{data.category}&rdquo;</p>
 				<ul className='play__buttons'>
 					<p className='button' onClick={toggleHint}>hints.</p>
-					<p className='button'>options.</p>
+					<p className='button' onClick={toggleOptions}>options.</p>
 					<p className='button' onClick={goHome}>quit.</p>
 				</ul>
 			</div>
 			<div className='play__mid'>
-				<Board letters={data.letters} push={push} />
+				<Board letters={data.letters} push={push} sounds={sounds} />
 			</div>
 			<div className='play__right'>
 				<List words={data.words} wordFounds={founds} hinted={hinted} />

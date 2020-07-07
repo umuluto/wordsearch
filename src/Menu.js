@@ -31,8 +31,10 @@ export default function Menu({ goTo, mergeData }) {
 
 	return (
 		<div className='menu'>
-			<p className='menu__message'>Categories:</p>
-			<p className='menu__button button' onClick={goTo(screens.HOME)}>quit.</p>
+			<div className='menu__title'>
+				<p className='menu__title__button button' onClick={goTo(screens.HOME)}>quit.</p>
+				<p className='menu__title__message'>Categories:</p>
+			</div>
 			{buttons}
 		</div>
 	);

@@ -19,6 +19,7 @@ p {
 }
 
 .button {
+	margin-right: 20px;
 	line-height: 1.5rem;
 	cursor: pointer;
 }
@@ -30,6 +31,10 @@ p {
 .button--medium {
 	font-size: 1.2rem;
 	line-height: 2rem;
+}
+
+.button--black {
+	color: black;
 }
 
 .home {
@@ -52,23 +57,45 @@ p {
 	margin-top: 10rem;
 }
 
+.wrapper--blurred {
+	pointer-events: none;
+	filter: blur(5px);
+}
+
+.options {
+	position: absolute;
+	display: flex;
+}
+
+.options__slider {
+	margin-right: 20px;
+}
+
 .menu {
+	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-items: center;
 	grid-gap: 1rem
 }
 
-.menu__message {
-	grid-row: 1 / span 5;
+.menu__title {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	width: 300px;
+	grid-row: 1;
 	grid-column: 1 / span 2;
+}
+
+.menu__title__message {
 	font-size: 1.5rem;
 	font-weight: 600;
 }
 
-.menu__button {
-	grid-row: 1 / span 5;
-	grid-column: 1;
+.menu__title__button {
+	position: absolute;
+	left: 0px;
 }
 
 .play__category {
@@ -139,10 +166,6 @@ p {
 		align-items: center;
 	}
 
-	.menu {
-		width: 40%;
-	}
-	
 	.board {
 		width: 40vw;
 		height: 40vw;

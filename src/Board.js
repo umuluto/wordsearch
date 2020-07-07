@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import sounds from './sounds.js';
 
 const colors = [
 	'#002685', '#449adf', '#4dc7fd',
@@ -16,7 +15,7 @@ function getColor() {
 	return colors[color_idx++];
 }
 
-export default function Board({ letters, push }) {
+export default function Board({ letters, push, sounds }) {
 	const boardSize = Math.sqrt(letters.length);
 	const [marks, setMarks] = useState([]);
 	const [hilites, setHilites] = useState([]);
