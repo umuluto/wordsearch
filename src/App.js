@@ -4,6 +4,7 @@ import Options from './Options.js';
 import Home from './Home.js';
 import Menu from './Menu.js';
 import Play from './Play.js';
+import { Fade } from './transitions.js';
 
 import './temp.css';
 
@@ -28,7 +29,7 @@ export default function App() {
 		setOptions(!showOptions);
 	};
 
-	const Over = () => (
+	const Over = Fade(() => (
 		<div className='over'>
 			<div className='over__msg'>
 				<p className='over__msg__congrats'>Congratulations!<br/>You have complete the puzzle</p>
@@ -38,7 +39,7 @@ export default function App() {
 				</a>
 			</div>
 		</div>
-	);
+	));
 
 	let main = null;
 	switch (screen) {

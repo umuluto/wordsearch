@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Board from './Board.js';
 import List from './List.js';
+import { Fade } from './transitions.js';
 import screens from './app_screens.js';
 
-export default function Play({ data, goTo, toggleOptions, sounds }) {
+function Play({ data, goTo, toggleOptions, sounds }) {
 	const [founds, setFounds] = useState([]);
 	const [hinted, setHinted] = useState(false);
 
@@ -52,3 +53,5 @@ export default function Play({ data, goTo, toggleOptions, sounds }) {
 		</div>
 	);
 }
+
+export default Fade(Play);

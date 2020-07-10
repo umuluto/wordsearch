@@ -1,7 +1,8 @@
 import React from 'react';
+import { Fade } from './transitions.js';
 import screens from './app_screens.js';
 
-export default function Home({ goTo, toggleOptions }) {
+function Home({ goTo, toggleOptions }) {
 	return (
 		<div className='home'>
 			<p className='home__title'>Word Search</p>
@@ -18,3 +19,5 @@ export default function Home({ goTo, toggleOptions }) {
 		</div>
 	);
 }
+
+export default Fade(Home);

@@ -210,6 +210,8 @@ p {
 }
 
 .over {
+	width: 100vw;
+	height: 100vh;
 	text-align: center;
 	background-image: url(/wordsearch/fireworks.png);
 }

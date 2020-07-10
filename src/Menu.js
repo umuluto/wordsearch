@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Fade } from './transitions.js';
 import screens from './app_screens.js';
 
-export default function Menu({ goTo, mergeData }) {
+function Menu({ goTo, mergeData }) {
 	const [levels, setLevels] = useState([]);
 
 	useEffect(() => {
@@ -42,3 +43,5 @@ export default function Menu({ goTo, mergeData }) {
 		</div>
 	);
 }
+
+export default Fade(Menu);
