@@ -4,4 +4,5 @@ export default {
 	READ: 3,
 	PLAY: 4,
 	LOAD: 5,
+	OVER: 6,
 }

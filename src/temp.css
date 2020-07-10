@@ -5,36 +5,73 @@
 	color: white;
 }
 
-html, body, #root {
+html, body, #root, .wrapper, .over {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-	background-color: #5282b3;
+	width: 100%;
 	height: 100%;
 }
 
-p {
+div, span, p {
 	font-family: 'Source Sans Pro', sans-serif;
+}
+
+small {
+	font-size: 1rem;
+}
+
+p {
 	text-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
-.button {
-	margin-right: 20px;
-	line-height: 1.5rem;
-	cursor: pointer;
+#root {
+	background-image: url(/wordsearch/background.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
-.button:hover {
-	text-decoration: underline;
+.bttn {
+    min-width: 70px;
+    display: inline-block;
+    background-color: cyan;
+    border-radius: 20px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.button--medium {
-	font-size: 1.2rem;
-	line-height: 2rem;
+.bttn * {
+    vertical-align: middle;
+    cursor: pointer;
 }
 
-.button--black {
-	color: black;
+.bttn:active {
+    transform: scale(1.1);
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.ico {
+		width: 20px;
+    display: inline-block;
+    transition: .5s;
+}
+
+.bttn__txt {
+    display: inline-block;
+    width: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.bttn--ico:hover .bttn__txt {
+    width: 50px;
+}
+
+.bttn--ico:hover .ico {
+    transform: scale(1.25);
 }
 
 .home {
@@ -46,15 +83,19 @@ p {
 }
 
 .home__title {
+	font-family: Pepsi;
 	font-size: 3rem;
+	margin-bottom: 10rem;
 }
 
 .home__buttons {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	margin-top: 10rem;
+}
+
+.home__buttons > * {
+	margin-bottom: 10px;
 }
 
 .wrapper--blurred {
@@ -64,15 +105,14 @@ p {
 
 .options {
 	position: absolute;
-	display: flex;
 }
 
-.options__slider {
-	margin-right: 20px;
+.options > * {
+	margin-right: 10px;
 }
 
 .menu {
-	width: 100%;
+	width: 500px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-items: center;
@@ -80,10 +120,10 @@ p {
 }
 
 .menu__title {
+	width: 100%;
 	display: flex;
 	position: relative;
 	justify-content: center;
-	width: 300px;
 	grid-row: 1;
 	grid-column: 1 / span 2;
 }
@@ -93,14 +133,24 @@ p {
 	font-weight: 600;
 }
 
-.menu__title__button {
+.menu__title__bttn {
 	position: absolute;
 	left: 0px;
+}
+
+.play__left {
+	align-self: start;
 }
 
 .play__category {
 	font-size: 2rem;
 	font-weight: 600;
+}
+
+.play__buttons {
+	display: flex;
+	min-width: 260px;
+	justify-content: space-between;
 }
 
 .play__mid {
@@ -133,7 +183,6 @@ p {
 	color: black;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1.5rem;
-	transition: .5s;
 }
 
 .board__cell:hover {
@@ -141,6 +190,7 @@ p {
 	font-size: 2.3rem;
 	transform: rotate(10deg);
 	text-transform: capitalize;
+	transition: .5s;
 }
 
 .board__cell:active {
@@ -157,6 +207,20 @@ p {
 	font-size: 1.8rem;
 	transform: rotate(10deg);
 	text-transform: capitalize;
+}
+
+.over {
+	text-align: center;
+	background-image: url(/wordsearch/fireworks.png);
+}
+
+.over__msg {
+	width: 300px;
+}
+
+.over__msg__congrats {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -180,12 +244,6 @@ p {
 		height: 40vw;
 	}
 
-	.play__left {
-		position: absolute;
-		left: 0px;
-		top: 20px;
-	}
-
 	.play__buttons {
 		margin-top: 2rem;
 	}
@@ -198,4 +256,9 @@ p {
 	.play__right {
 		width: 5rem;
 	}
+}
+
+@font-face {
+	font-family: Pepsi;
+	src: url(/wordsearch/pepsi.ttf) format("truetype");
 }
