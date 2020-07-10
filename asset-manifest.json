@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/wordsearch/static/css/main.cab71660.chunk.css",
-    "main.js": "/wordsearch/static/js/main.c8f9ef27.chunk.js",
-    "main.js.map": "/wordsearch/static/js/main.c8f9ef27.chunk.js.map",
+    "main.css": "/wordsearch/static/css/main.5beacc72.chunk.css",
+    "main.js": "/wordsearch/static/js/main.2ba68e8c.chunk.js",
+    "main.js.map": "/wordsearch/static/js/main.2ba68e8c.chunk.js.map",
     "runtime-main.js": "/wordsearch/static/js/runtime-main.c8a04ef0.js",
     "runtime-main.js.map": "/wordsearch/static/js/runtime-main.c8a04ef0.js.map",
-    "static/js/2.da268605.chunk.js": "/wordsearch/static/js/2.da268605.chunk.js",
-    "static/js/2.da268605.chunk.js.map": "/wordsearch/static/js/2.da268605.chunk.js.map",
+    "static/js/2.ade4e228.chunk.js": "/wordsearch/static/js/2.ade4e228.chunk.js",
+    "static/js/2.ade4e228.chunk.js.map": "/wordsearch/static/js/2.ade4e228.chunk.js.map",
     "index.html": "/wordsearch/index.html",
-    "precache-manifest.7a5dde8d76a222360862364b204d3cd5.js": "/wordsearch/precache-manifest.7a5dde8d76a222360862364b204d3cd5.js",
+    "precache-manifest.f2752fdbab2325ae1572ca51b8bacc46.js": "/wordsearch/precache-manifest.f2752fdbab2325ae1572ca51b8bacc46.js",
     "service-worker.js": "/wordsearch/service-worker.js",
-    "static/css/main.cab71660.chunk.css.map": "/wordsearch/static/css/main.cab71660.chunk.css.map",
-    "static/js/2.da268605.chunk.js.LICENSE.txt": "/wordsearch/static/js/2.da268605.chunk.js.LICENSE.txt"
+    "static/css/main.5beacc72.chunk.css.map": "/wordsearch/static/css/main.5beacc72.chunk.css.map",
+    "static/js/2.ade4e228.chunk.js.LICENSE.txt": "/wordsearch/static/js/2.ade4e228.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c8a04ef0.js",
-    "static/js/2.da268605.chunk.js",
-    "static/css/main.cab71660.chunk.css",
-    "static/js/main.c8f9ef27.chunk.js"
+    "static/js/2.ade4e228.chunk.js",
+    "static/css/main.5beacc72.chunk.css",
+    "static/js/main.2ba68e8c.chunk.js"
   ]
 }
